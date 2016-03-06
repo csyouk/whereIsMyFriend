@@ -1,0 +1,10 @@
+kakao 응답 형태는 다음과 같다.
+{
+  "id":98531219,
+  "properties":
+  {
+    "nickname":"육",
+    "thumbnail_image":"http://mud-kage.kakao.co.kr/14/dn/btqcM4CV5WR/c7AE2hHkptwZCJ8lsRaEk0/o.jpg",
+    "profile_image":"http://mud-kage.kakao.co.kr/14/dn/btqcMWx76Ul/45nAQIIVSBy52Cqx6NseTK/o.jpg"
+  }
+}
