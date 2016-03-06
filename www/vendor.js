@@ -19,7 +19,7 @@ function initialize() {
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
   $.ajax({
-    url: 'http://localhost:8000/users',
+    url: "http://" + location.host +'/users',
     type:'GET',
     dataType:'JSON',
     success:function(data, status, jqXHR){
