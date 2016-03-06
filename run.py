@@ -29,7 +29,6 @@ client = MongoClient('127.0.0.1', 27017)
 db = client[GLOBALS["db_name"]]
 
 def remove_object_id(document):
-    print(document)
     document.pop("_id")
     return document
 
@@ -48,7 +47,7 @@ class UsersHandler(BaseHandler):
 
 class UserHandler(tornado.web.RequestHandler):
     def get(self, user_id):
-        print(user_id)
+        pass
 
     # @tornado.web.asynchronous
     def post(self, user_id):
