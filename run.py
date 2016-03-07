@@ -73,27 +73,27 @@ class UserHandler(tornado.web.RequestHandler):
                     result = data["properties"]["profile_image"]
                 except KeyError as e:
                     return None
-            else if(case == "thumbnail_image"):
+            elif(case == "thumbnail_image"):
                 try:
                     result = data["properties"]["profile_image"]
                 except KeyError as e:
                     return None
-            else if(case == "nickname"):
+            elif(case == "nickname"):
                 try:
                     result = data["properties"]["nickname"]
                 except KeyError as e:
                     return None
-            else if(case == "latitude"):
+            elif(case == "latitude"):
                 try:
                     result = data["latitude"]
                 except KeyError as e:
                     return None
-            else if(case == "longtitude"):
+            elif(case == "longtitude"):
                 try:
                     result = data["longtitude"]
                 except KeyError as e:
                     return None
-            else if(case == "userAgent"):
+            elif(case == "userAgent"):
                 try:
                     result = data["userAgent"]
                 except KeyError as e:
