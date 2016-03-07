@@ -64,7 +64,7 @@ function initialize() {
 
 function setInfoWindows(map, user){
   console.log("user ", user);
-  var userLocation = new google.maps.LatLng(user.latitude, user.longitutde);
+  var userLocation = new google.maps.LatLng(user.latitude, user.longitude);
 
   var contentString =
   '<div id="iw-container">' +
