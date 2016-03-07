@@ -33,7 +33,22 @@
     }
     function showError(error)
     {
-        alert(error);
+        alert("당신의 위치를 알려주세요");
+        console.log(error);
+        $.ajax({
+          url: "/error"
+          type:'POST',
+          dataType:'JSON',
+          data:JSON.stringify({"error":error}),
+          success:function(data, status, jqXHR){
+            console.log("done");
+          },
+          error:function(jqXHR, status, error){
+            console.log(jqXHR);
+            console.log(status);
+            console.log(error);
+          }}
+        );
     }
     sendLog();
     getLocation();
