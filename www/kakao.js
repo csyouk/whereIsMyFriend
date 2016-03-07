@@ -50,6 +50,7 @@
               res.latitude = userPosition.coords.latitude;
               res.longitude = userPosition.coords.longitude;
             } catch(err){
+              console.log("error : ", err);
               var userInfo = JSON.stringify(res);
               $.ajax({
                 url: "/error",
@@ -69,6 +70,7 @@
             }
 
             var userInfo = JSON.stringify(res);
+            console.log("data", res);
             $.ajax({
               url: "/users/"+res.id,
               type:'POST',
