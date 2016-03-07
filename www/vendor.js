@@ -42,10 +42,10 @@ function initialize() {
     type:'GET',
     dataType:'JSON',
     success:function(data, status, jqXHR){
-      console.log("done");
-      console.log(data);
-      console.log(status);
-      console.log(jqXHR);
+      // console.log("done");
+      // console.log(data);
+      // console.log(status);
+      // console.log(jqXHR);
 
       var users = data.result;
       for (var i = 0; i < users.length; i++) {
@@ -63,7 +63,7 @@ function initialize() {
 }
 
 function setInfoWindows(map, user){
-  console.log("user ", user);
+  // console.log("user ", user);
   var userLocation = new google.maps.LatLng(user.latitude, user.longitude);
 
   var contentString =
