@@ -3,7 +3,7 @@ function sendLog(){
     url: "/log",
     type:'POST',
     dataType:'JSON',
-    data:{"user_agent":navigator.userAgent, "path":window.location.pathname},
+    data:JSON.stringify({"user_agent":navigator.userAgent, "path":window.location.pathname}),
     success:function(data, status, jqXHR){
       console.log("done");
       // window.location.href = 'whereIsMyFriend.com'
@@ -33,7 +33,7 @@ function initialize() {
     zoom: 8,
     center: initLocation,
     mapTypeControl:false
-  }
+  };
 
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
@@ -51,19 +51,15 @@ function initialize() {
       for (var i = 0; i < users.length; i++) {
         users[i];
         setInfoWindows(map, users[i]);
-      }
+      };
 
     },
     error:function(jqXHR, status, error){
       console.log(jqXHR);
       console.log(status);
       console.log(error);
-    }
-
+    };
   });
-
-
-
 }
 
 function setInfoWindows(map, user){
@@ -83,7 +79,7 @@ function setInfoWindows(map, user){
   var infoWindow = new google.maps.InfoWindow({
     content: contentString,
     maxWidth: 300
-  })
+  });
 
   marker = new CustomMarker(
     userLocation,

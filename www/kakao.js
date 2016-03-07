@@ -1,13 +1,14 @@
     var userPosition;
     function sendLog(){
+      var data = {"user_agent":navigator.userAgent, "path":window.location.pathname};
+      console.log(data);
       $.ajax({
         url: "/log",
         type:'POST',
         dataType:'JSON',
-        data:{"user_agent":navigator.userAgent, "path":window.location.pathname},
+        data: JSON.stringify(data),
         success:function(data, status, jqXHR){
           console.log("done");
-          // window.location.href = 'whereIsMyFriend.com'
         },
         error:function(jqXHR, status, error){
           console.log(jqXHR);
@@ -18,10 +19,8 @@
     }
     function getLocation()
     {
-      if (navigator.geolocation)
-      {
+      if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition,showError);
-
       }
       else{alert("Geolocation is not supported by this browser.");}
     }
@@ -60,13 +59,13 @@
                 success:function(data, status, jqXHR){
                   console.log("done");
                   window.location.href = "http://" + location.host +"/friends.html"
-                  // window.location.href = 'whereIsMyFriend.com'
                 },
                 error:function(jqXHR, status, error){
                   console.log(jqXHR);
                   console.log(status);
                   console.log(error);
                 }}
+              );
             }
 
             var userInfo = JSON.stringify(res);
@@ -78,7 +77,6 @@
               success:function(data, status, jqXHR){
                 console.log("done");
                 window.location.href = "http://" + location.host +"/friends.html"
-                // window.location.href = 'whereIsMyFriend.com'
               },
               error:function(jqXHR, status, error){
                 console.log(jqXHR);
