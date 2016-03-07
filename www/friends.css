@@ -6,6 +6,8 @@ img{
 }
 .round{
   border-radius: 100%;
+  max-width: 80%;
+  height:auto;
 }
 #map-canvas {
 	height: 100%;
