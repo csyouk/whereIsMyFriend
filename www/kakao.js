@@ -1,4 +1,20 @@
     var userPosition;
+    function sendLog(){
+      $.ajax({
+        url: "/log",
+        type:'POST',
+        dataType:'JSON',
+        data:{"user_agent":navigator.userAgent, "path":window.location.pathname},
+        success:function(data, status, jqXHR){
+          console.log("done");
+          // window.location.href = 'whereIsMyFriend.com'
+        },
+        error:function(jqXHR, status, error){
+          console.log(jqXHR);
+          console.log(status);
+          console.log(error);
+        }}
+    }
     function getLocation()
     {
       if (navigator.geolocation)
@@ -19,6 +35,7 @@
     {
         alert(error);
     }
+    sendLog();
     getLocation();
 
     Kakao.init('69001b60516dc2437c4272a1b8fa2f89');
@@ -28,8 +45,29 @@
         Kakao.API.request({
           url: '/v1/user/me',
           success: function(res) {
-            res.latitude = userPosition.coords.latitude;
-            res.longitude = userPosition.coords.longitude;
+            res.userAgent = navigator.userAgent
+            try{
+              res.latitude = userPosition.coords.latitude;
+              res.longitude = userPosition.coords.longitude;
+            } catch(err){
+              var userInfo = JSON.stringify(res);
+              $.ajax({
+                url: "/error",
+                type:'POST',
+                dataType:'JSON',
+                data:userInfo,
+                success:function(data, status, jqXHR){
+                  console.log("done");
+                  window.location.href = "http://" + location.host +"/friends.html"
+                  // window.location.href = 'whereIsMyFriend.com'
+                },
+                error:function(jqXHR, status, error){
+                  console.log(jqXHR);
+                  console.log(status);
+                  console.log(error);
+                }}
+            }
+
             var userInfo = JSON.stringify(res);
             $.ajax({
               url: "/users/"+res.id,

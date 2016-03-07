@@ -14,6 +14,7 @@ import sys
 import time
 import socket
 import logging
+from datetime import datetime
 from platform import system
 from tornado.options import define, options
 from tornado import gen
@@ -32,6 +33,20 @@ def remove_object_id(document):
     document.pop("_id")
     return document
 
+class ErrorHandler(tornado.web.RequestHandler):
+    def post(self):
+        data = json.loads(self.request.body.decode(encoding="UTF-8"))
+        data["create_time"] = "create_time": datetime.now()
+        db.error.insert(data)
+        self.write({})
+
+class LogHandler(torando.web.RequestHandler):
+    def post(self):
+        data = json.loads(self.request.body.decode(encoding="UTF-8"))
+        data["create_time"] = "create_time": datetime.now()
+        db.log.insert(data)
+        self.write({})
+
 class BaseHandler(tornado.web.RequestHandler):
     def set_default_headers(self):
         self.set_header("Access-Control-Allow-Origin", "*")
@@ -39,7 +54,7 @@ class BaseHandler(tornado.web.RequestHandler):
         self.set_header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS")
         self.set_header("Access-Control-Allow-Credentials", "true")
 
-class UsersHandler(BaseHandler):
+class UsersHandler(tornado.web.RequestHandler):
     def get(self):
         users_c = db.users.find()
         users = [remove_object_id(u) for u in users_c]
@@ -52,15 +67,53 @@ class UserHandler(tornado.web.RequestHandler):
     # @tornado.web.asynchronous
     def post(self, user_id):
         data = json.loads(self.request.body.decode(encoding="UTF-8"))
+        def check_properties(obj, case):
+            if(case == "profile_image"):
+                try:
+                    result = data["properties"]["profile_image"]
+                except KeyError as e:
+                    return None
+            else if(case == "thumbnail_image"):
+                try:
+                    result = data["properties"]["profile_image"]
+                except KeyError as e:
+                    return None
+            else if(case == "nickname"):
+                try:
+                    result = data["properties"]["nickname"]
+                except KeyError as e:
+                    return None
+            else if(case == "latitude"):
+                try:
+                    result = data["latitude"]
+                except KeyError as e:
+                    return None
+            else if(case == "longtitude"):
+                try:
+                    result = data["longtitude"]
+                except KeyError as e:
+                    return None
+            else if(case == "userAgent"):
+                try:
+                    result = data["userAgent"]
+                except KeyError as e:
+                    return None
+            else:
+                return None
+            return result
+
         user_c = db.users.find_one({"kakao_id":user_id})
         if user_c is None:
+            profile_image = data["properties"]["profile_image"]
             db.users.insert({
                 "kakao_id": user_id,
-                "profile_image": data["properties"]["profile_image"],
-                "thumbnail_image": data["properties"]["thumbnail_image"],
-                "nickname": data["properties"]["nickname"],
-                "latitude": data["latitude"],
-                "longitutde": data["longitude"]
+                "profile_image": check_properties(data, "profile_image"),
+                "thumbnail_image": check_properties(data, "thumbnail_image"),
+                "nickname": check_properties(data, "nickname"),
+                "latitude": check_properties(data, "latitude"),
+                "longitutde": check_properties(data, "longitude"),
+                "user_agent": check_properties(data, "userAgent"),
+                "create_time": datetime.now()
             })
         self.write({})
 
@@ -74,6 +127,8 @@ class UserHandler(tornado.web.RequestHandler):
 class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
+            (r"/error", ErrorHandler),
+            (r"/log", LogHandler),
             (r"/users", UsersHandler),
             (r"/users/(.*)", UserHandler),
             (r"/()$", tornado.web.StaticFileHandler, {'path': 'www/index.html'}),

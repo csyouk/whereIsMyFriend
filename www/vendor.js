@@ -1,10 +1,28 @@
+function sendLog(){
+  $.ajax({
+    url: "/log",
+    type:'POST',
+    dataType:'JSON',
+    data:{"user_agent":navigator.userAgent, "path":window.location.pathname},
+    success:function(data, status, jqXHR){
+      console.log("done");
+      // window.location.href = 'whereIsMyFriend.com'
+    },
+    error:function(jqXHR, status, error){
+      console.log(jqXHR);
+      console.log(status);
+      console.log(error);
+    }}
+}
+
+
 String.prototype.interpolate = function (o) {
-    return this.replace(/{([^{}]*)}/g,
-        function (a, b) {
-            var r = o[b];
-            return typeof r === 'string' || typeof r === 'number' ? r : a;
-        }
-    );
+  return this.replace(/{([^{}]*)}/g,
+  function (a, b) {
+    var r = o[b];
+    return typeof r === 'string' || typeof r === 'number' ? r : a;
+  }
+);
 };
 
 function initialize() {
@@ -124,6 +142,5 @@ function setInfoWindows(map, user){
     });
   });
 }
-
-
+sendLog()
 google.maps.event.addDomListener(window, 'load', initialize);
