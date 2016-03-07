@@ -13,6 +13,7 @@ function sendLog(){
       console.log(status);
       console.log(error);
     }}
+  );
 }
 
 

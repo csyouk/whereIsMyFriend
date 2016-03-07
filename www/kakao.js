@@ -14,6 +14,7 @@
           console.log(status);
           console.log(error);
         }}
+      );
     }
     function getLocation()
     {
