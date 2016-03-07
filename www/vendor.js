@@ -1,3 +1,4 @@
+
 function sendLog(){
   $.ajax({
     url: "/log",
@@ -48,11 +49,12 @@ function initialize() {
       // console.log(jqXHR);
 
       var users = data.result;
+      console.log("users : ", users);
       for (var i = 0; i < users.length; i++) {
         users[i];
         setInfoWindows(map, users[i]);
       };
-
+      document.getElementById("number").innerHTML = users.length;
     },
     error:function(jqXHR, status, error){
       console.log(jqXHR);

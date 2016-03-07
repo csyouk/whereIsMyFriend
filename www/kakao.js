@@ -1,3 +1,8 @@
+
+    function moveToView(){
+      window.location.href = "http://" + location.host +"/friends.html"
+    }
+
     var userPosition;
     function sendLog(){
       var data = {"user_agent":navigator.userAgent, "path":window.location.pathname};
