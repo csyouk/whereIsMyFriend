@@ -40,7 +40,7 @@ class ErrorHandler(tornado.web.RequestHandler):
         db.error.insert(data)
         self.write({})
 
-class LogHandler(torando.web.RequestHandler):
+class LogHandler(tornado.web.RequestHandler):
     def post(self):
         data = json.loads(self.request.body.decode(encoding="UTF-8"))
         data["create_time"] = datetime.now()
