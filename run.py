@@ -38,7 +38,6 @@ class ErrorHandler(tornado.web.RequestHandler):
     def post(self):
         data = json.loads(self.request.body.decode(encoding="UTF-8"))
         data["create_time"] = datetime.now()
-        print("error", data)
         db.error_log.insert(data)
         self.write({})
 
