@@ -17,24 +17,21 @@
         }}
       );
     }
-    function getLocation()
-    {
+    function getLocation() {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition,showError);
       }
-      else{alert("Geolocation is not supported by this browser.");}
+      else{alert("이 브라우저에서는 위치정보를 불러올 수 없습니다.");}
     }
-    function showPosition(position)
-    {
+    function showPosition(position) {
       userPosition = position;
       console.log(userPosition);
       // x2.innerHTML="Latitude: " + position.coords.latitude +
       // "<br />Longitude: " + position.coords.longitude;
     }
-    function showError(error)
-    {
+    function showError(error){
         alert("당신의 위치를 알려주세요");
-        console.log(error);
+        console.log("GEO location error : ", error);
         $.ajax({
           url: "/error",
           type:'POST',
@@ -47,8 +44,8 @@
             console.log(jqXHR);
             console.log(status);
             console.log(error);
-          }}
-        );
+          }
+        });
     }
     sendLog();
     getLocation();
