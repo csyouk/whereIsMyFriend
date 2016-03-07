@@ -39,7 +39,7 @@
           url: "/error",
           type:'POST',
           dataType:'JSON',
-          data:JSON.stringify({"error":error}),
+          data:JSON.stringify({"error":error.message}),
           success:function(data, status, jqXHR){
             console.log("done");
           },
