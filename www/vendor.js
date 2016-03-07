@@ -58,7 +58,7 @@ function initialize() {
       console.log(jqXHR);
       console.log(status);
       console.log(error);
-    };
+    }
   });
 }
 
