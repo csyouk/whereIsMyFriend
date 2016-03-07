@@ -36,14 +36,14 @@ def remove_object_id(document):
 class ErrorHandler(tornado.web.RequestHandler):
     def post(self):
         data = json.loads(self.request.body.decode(encoding="UTF-8"))
-        data["create_time"] = "create_time": datetime.now()
+        data["create_time"] = datetime.now()
         db.error.insert(data)
         self.write({})
 
 class LogHandler(torando.web.RequestHandler):
     def post(self):
         data = json.loads(self.request.body.decode(encoding="UTF-8"))
-        data["create_time"] = "create_time": datetime.now()
+        data["create_time"] = datetime.now()
         db.log.insert(data)
         self.write({})
 
