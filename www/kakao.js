@@ -36,7 +36,7 @@
         alert("당신의 위치를 알려주세요");
         console.log(error);
         $.ajax({
-          url: "/error"
+          url: "/error",
           type:'POST',
           dataType:'JSON',
           data:JSON.stringify({"error":error}),
