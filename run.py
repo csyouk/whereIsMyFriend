@@ -31,6 +31,7 @@ db = client[GLOBALS["db_name"]]
 
 def remove_object_id(document):
     document.pop("_id")
+    document.pop("create_time")
     return document
 
 class ErrorHandler(tornado.web.RequestHandler):
