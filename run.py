@@ -76,7 +76,7 @@ class UserHandler(tornado.web.RequestHandler):
                     return None
             elif(case == "thumbnail_image"):
                 try:
-                    result = data["properties"]["profile_image"]
+                    result = data["properties"]["thumbnail_image"]
                 except KeyError as e:
                     return None
             elif(case == "nickname"):
