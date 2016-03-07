@@ -70,7 +70,7 @@
             }
 
             var userInfo = JSON.stringify(res);
-            alert("data", res);
+            alert("data"+userInfo);
             $.ajax({
               url: "/users/"+res.id,
               type:'POST',
