@@ -89,7 +89,7 @@ class UserHandler(tornado.web.RequestHandler):
                     result = data["latitude"]
                 except KeyError as e:
                     return None
-            elif(case == "longitutde"):
+            elif(case == "longitude"):
                 try:
                     result = data["longitude"]
                 except KeyError as e:
