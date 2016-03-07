@@ -91,7 +91,7 @@ class UserHandler(tornado.web.RequestHandler):
                     return None
             elif(case == "longitutde"):
                 try:
-                    result = data["longitutde"]
+                    result = data["longitude"]
                 except KeyError as e:
                     return None
             elif(case == "userAgent"):
@@ -112,7 +112,7 @@ class UserHandler(tornado.web.RequestHandler):
                 "thumbnail_image": check_properties(data, "thumbnail_image"),
                 "nickname": check_properties(data, "nickname"),
                 "latitude": check_properties(data, "latitude"),
-                "longitutde": check_properties(data, "longitutde"),
+                "longitude": check_properties(data, "longitude"),
                 "user_agent": check_properties(data, "userAgent"),
                 "create_time": datetime.now()
             })
