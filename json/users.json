@@ -1,0 +1,77 @@
+{
+    "_id" : ObjectId("56dced3513c611318019e9ed"),
+    "profile_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcMWx76Ul/45nAQIIVSBy52Cqx6NseTK/o.jpg",
+    "nickname" : "육",
+    "user_agent" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36",
+    "create_time" : ISODate("2016-03-08T11:30:12.314+0000"),
+    "latitude" : 37.5026176,
+    "longitude" : 127.0028885,
+    "kakao_id" : "98531219",
+    "thumbnail_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcM4CV5WR/c7AE2hHkptwZCJ8lsRaEk0/o.jpg"
+}
+{
+    "_id" : ObjectId("56dcef1513c611318ab2484b"),
+    "latitude" : 37.56617346328999,
+    "kakao_id" : "99072250",
+    "create_time" : ISODate("2016-03-07T03:01:41.594+0000"),
+    "nickname" : "Q",
+    "thumbnail_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcMfSRIDw/Kfy1dWxZk6BM1vzMwLskEk/o.jpg",
+    "profile_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcM3Ymmhv/Kbo69gWKcjfKUPELxWF6kK/o.jpg",
+    "longitude" : 126.98591323141984,
+    "user_agent" : "Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13D15 Safari/601.1"
+}
+{
+    "_id" : ObjectId("56dcf1a213c611318ab2485a"),
+    "latitude" : 37.515424,
+    "kakao_id" : "99074044",
+    "create_time" : ISODate("2016-03-07T03:12:34.970+0000"),
+    "nickname" : "김현식",
+    "thumbnail_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcM1lWOND/q40IIlQZtyAmgbhtFGGrqK/o.jpg",
+    "profile_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcMYpdq8Q/GZdaAfcTD5aru2k7APPXL0/o.jpg",
+    "longitude" : 126.967279,
+    "user_agent" : "Mozilla/5.0 (Linux; Android 5.1.1; SAMSUNG SM-A800S Build/LMY47X) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/3.3 Chrome/38.0.2125.102 Mobile Safari/537.36"
+}
+{
+    "_id" : ObjectId("56dcf2ba13c611318ab24865"),
+    "latitude" : 37.527031,
+    "kakao_id" : "99074813",
+    "create_time" : ISODate("2016-03-07T03:17:14.863+0000"),
+    "nickname" : "윤혜진",
+    "thumbnail_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcM3D3Xac/h5muk8rpiWTrIMOuev8Idk/o.jpg",
+    "profile_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcMfFl2cC/EHEHtumqgqYVSC2RPS9MQk/o.jpg",
+    "longitude" : 126.981269,
+    "user_agent" : "Mozilla/5.0 (Linux; Android 6.0.1; SM-G920K Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.95 Mobile Safari/537.36"
+}
+{
+    "_id" : ObjectId("56dcf6bd13c611318ab24872"),
+    "latitude" : 1.2982272766843708,
+    "kakao_id" : "99077811",
+    "create_time" : ISODate("2016-03-07T03:34:21.655+0000"),
+    "nickname" : "장금시스타❤️Dayi kim",
+    "thumbnail_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcMhiObth/YTE0aHjUxyoIeJqAk6GCAk/o.jpg",
+    "profile_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcMdU1V8J/ojqZ0zDCubB0qgVxX2SP21/o.jpg",
+    "longitude" : 103.84379879271697,
+    "user_agent" : "Mozilla/5.0 (iPhone; CPU iPhone OS 8_1_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B440 Safari/600.1.4"
+}
+{
+    "_id" : ObjectId("56dcfda413c611318ab24879"),
+    "latitude" : 37.5186516,
+    "kakao_id" : "99083004",
+    "create_time" : ISODate("2016-03-07T04:03:48.382+0000"),
+    "nickname" : "김병수",
+    "thumbnail_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcMbbPAV3/cQ6OVpb4temJdxi16Wi5F0/o.jpg",
+    "profile_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcM2SGTuX/EKkZmp0BYN7s3pPLnev3IK/o.jpg",
+    "longitude" : 127.0078127,
+    "user_agent" : "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+}
+{
+    "_id" : ObjectId("56dd67b9d4c6ea188b9726e3"),
+    "profile_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcL7AxD4B/NactRUHJkuTkryQ5vOjCg1/o.jpg",
+    "nickname" : "하석균",
+    "user_agent" : "Mozilla/5.0 (Linux; U; Android 4.4.2; ko-kr; LG-F300S Build/KOT49I.F300S20f) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.1599.103 Mobile Safari/537.36",
+    "create_time" : ISODate("2016-03-07T06:36:19.728+0000"),
+    "latitude" : 37.5646539260759,
+    "longitude" : 126.99291802851548,
+    "kakao_id" : "99101412",
+    "thumbnail_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcMZBH55b/SGRF0H2l4Mwk7KCn04z4w0/o.jpg"
+}

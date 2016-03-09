@@ -1,0 +1,49 @@
+{
+    "_id" : ObjectId("56dd0ef113c611339b7db95c"),
+    "error" : "User denied Geolocation",
+    "create_time" : ISODate("2016-03-07T05:17:37.304+0000")
+}
+{
+    "_id" : ObjectId("56dd167f13c611340b689095"),
+    "properties" : {
+        "thumbnail_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcMZBH55b/SGRF0H2l4Mwk7KCn04z4w0/o.jpg",
+        "nickname" : "하석균", 
+        "profile_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcL7AxD4B/NactRUHJkuTkryQ5vOjCg1/o.jpg"
+    },
+    "userAgent" : "Mozilla/5.0 (Linux; U; Android 4.4.2; ko-kr; LG-F300S Build/KOT49I.F300S20f) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.1599.103 Mobile Safari/537.36",
+    "id" : NumberInt(99101412),
+    "create_time" : ISODate("2016-03-07T05:49:51.908+0000")
+}
+{
+    "_id" : ObjectId("56dd19ff13c611340b689099"),
+    "properties" : {
+        "thumbnail_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcM4CV5WR/c7AE2hHkptwZCJ8lsRaEk0/o.jpg",
+        "nickname" : "육",
+        "profile_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcMWx76Ul/45nAQIIVSBy52Cqx6NseTK/o.jpg"
+    },
+    "userAgent" : "Mozilla/5.0 (Linux; Android 5.1.1; SGP511 Build/23.4.A.1.232) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.95 Safari/537.36",
+    "id" : NumberInt(98531219),
+    "create_time" : ISODate("2016-03-07T06:04:47.362+0000")
+}
+{
+    "_id" : ObjectId("56dd1a3813c611340b68909c"),
+    "properties" : {
+        "thumbnail_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcM4CV5WR/c7AE2hHkptwZCJ8lsRaEk0/o.jpg",
+        "nickname" : "육",
+        "profile_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcMWx76Ul/45nAQIIVSBy52Cqx6NseTK/o.jpg"
+    },
+    "userAgent" : "Mozilla/5.0 (Linux; Android 5.1.1; SGP511 Build/23.4.A.1.232) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.95 Safari/537.36",
+    "id" : NumberInt(98531219),
+    "create_time" : ISODate("2016-03-07T06:05:44.052+0000")
+}
+{
+    "_id" : ObjectId("56dd6b3d13c611340b6890b4"),
+    "properties" : {
+        "thumbnail_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcMU1wiP1/jHwjjkjxpf6twvW4n9ZlNk/o.jpg",
+        "nickname" : "승Q",
+        "profile_image" : "http://mud-kage.kakao.co.kr/14/dn/btqcM3KVO6p/boeuqvFcHtodChybvTY8U0/o.jpg"
+    },
+    "userAgent" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36",
+    "id" : NumberInt(99177345),
+    "create_time" : ISODate("2016-03-07T11:51:25.856+0000")
+}
